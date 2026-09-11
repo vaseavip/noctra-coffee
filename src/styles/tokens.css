@@ -1,0 +1,101 @@
+/*
+  NOCTRA COFFEE — design tokens
+  Palette: espresso / charcoal darks, warm cream light, caramel + copper accents.
+  Two theme surfaces are used across sections (dark editorial, warm cream) —
+  never a single flat color for the whole page.
+*/
+
+:root {
+  /* ---- Core palette ---- */
+  --espresso-950: #14100c;
+  --espresso-900: #1b1510;
+  --espresso-800: #241c15;
+  --espresso-700: #302519;
+  --espresso-600: #4a3a28;
+
+  --cream-100: #faf5ea;
+  --cream-200: #f3ead9;
+  --cream-300: #e9dcc3;
+  --cream-400: #d8c6a3;
+
+  --caramel-500: #c68a4e;
+  --caramel-400: #d9a066;
+  --copper-500: #b8733a;
+  --copper-300: #e0a165;
+  /* Darker than --copper-500 so small accent labels stay AA-compliant on cream surfaces. */
+  --copper-700: #96551f;
+
+  --ink: #0f0c09;
+
+  /* ---- Semantic tokens: dark surfaces ---- */
+  --surface-dark: var(--espresso-950);
+  --surface-dark-alt: var(--espresso-900);
+  --surface-dark-raised: var(--espresso-800);
+  --text-on-dark: var(--cream-200);
+  --text-on-dark-muted: #b3a290;
+  --text-on-dark-faint: #8a7a68;
+  --line-on-dark: rgba(243, 234, 217, 0.12);
+  --line-on-dark-strong: rgba(243, 234, 217, 0.22);
+
+  /* ---- Semantic tokens: light (cream) surfaces ---- */
+  --surface-light: var(--cream-200);
+  --surface-light-alt: var(--cream-100);
+  --text-on-light: var(--espresso-950);
+  --text-on-light-muted: #5c4d3d;
+  --line-on-light: rgba(20, 16, 12, 0.12);
+  --line-on-light-strong: rgba(20, 16, 12, 0.22);
+
+  /* ---- Accent ---- */
+  --accent: var(--caramel-500);
+  --accent-strong: var(--copper-500);
+
+  /* ---- Typography ---- */
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-body: "Manrope", "Segoe UI", system-ui, sans-serif;
+
+  --fs-hero: clamp(3rem, 3.2vw + 2.4rem, 7.5rem);
+  --fs-h1: clamp(2.25rem, 1.8vw + 1.8rem, 4.25rem);
+  --fs-h2: clamp(1.75rem, 1.2vw + 1.4rem, 2.75rem);
+  --fs-h3: clamp(1.25rem, 0.6vw + 1.1rem, 1.75rem);
+  --fs-lead: clamp(1.125rem, 0.4vw + 1rem, 1.375rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-micro: 0.75rem;
+
+  /* ---- Spacing scale ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+  --space-10: 9rem;
+
+  --section-pad-y: clamp(4.5rem, 6vw, 9rem);
+  --page-gutter: clamp(1.25rem, 5vw, 5rem);
+  --content-max: 90rem;
+
+  /* ---- Motion ---- */
+  --ease-editorial: cubic-bezier(0.16, 0.8, 0.24, 1);
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-fast: 0.32s;
+  --dur-med: 0.65s;
+  --dur-slow: 1.1s;
+
+  /* ---- Elevation ---- */
+  --shadow-soft: 0 1.5rem 3rem -1.5rem rgba(15, 12, 9, 0.55);
+  --shadow-strong: 0 2.5rem 5rem -2rem rgba(15, 12, 9, 0.7);
+
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0.01s;
+    --dur-med: 0.01s;
+    --dur-slow: 0.01s;
+  }
+}

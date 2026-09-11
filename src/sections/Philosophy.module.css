@@ -1,0 +1,76 @@
+.philosophy {
+  position: relative;
+  overflow: hidden;
+}
+
+.bigNumeral {
+  position: absolute;
+  top: -3rem;
+  right: 2vw;
+  font-family: var(--font-display);
+  font-size: min(26vw, 22rem);
+  color: var(--text-on-dark);
+  opacity: 0.035;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.grid {
+  margin-top: var(--space-8);
+  display: grid;
+  gap: var(--space-8);
+}
+
+.heading {
+  font-size: var(--fs-h1);
+  font-weight: 380;
+  color: var(--text-on-dark);
+}
+
+.heading em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+  max-width: 34rem;
+}
+
+.paragraph {
+  font-size: var(--fs-lead);
+  color: var(--text-on-dark-muted);
+}
+
+.wordList {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line-on-dark);
+}
+
+.wordItem {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-5);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--line-on-dark);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+}
+
+.wordIndex {
+  font-family: var(--font-body);
+  font-size: var(--fs-micro);
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 56rem) {
+  .grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+  }
+}

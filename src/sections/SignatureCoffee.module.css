@@ -1,0 +1,125 @@
+.coffee {
+  position: relative;
+}
+
+.heading {
+  max-width: 40rem;
+}
+
+.title {
+  margin-top: var(--space-4);
+  font-size: var(--fs-h1);
+  font-weight: 380;
+}
+
+.featured {
+  margin-top: var(--space-9);
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+  padding: var(--space-8);
+  background: var(--surface-light-alt);
+  border: 1px solid var(--line-on-light);
+  border-radius: 1.5rem;
+}
+
+.featuredMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featuredIcon {
+  width: 9rem;
+  height: 9rem;
+  color: var(--copper-500);
+}
+
+.tag {
+  display: inline-block;
+  font-size: var(--fs-micro);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--copper-700);
+}
+
+.featuredName {
+  margin-top: var(--space-3);
+  font-size: var(--fs-h2);
+  font-weight: 460;
+}
+
+.featuredDescription {
+  margin-top: var(--space-4);
+  max-width: 34rem;
+  color: var(--text-on-light-muted);
+  font-size: var(--fs-lead);
+}
+
+.featuredPrice {
+  display: inline-block;
+  margin-top: var(--space-6);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.list {
+  margin-top: var(--space-8);
+  border-top: 1px solid var(--line-on-light);
+}
+
+.listItem {
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  align-items: center;
+  gap: var(--space-5);
+  padding-block: var(--space-6);
+  border-bottom: 1px solid var(--line-on-light);
+  transition: padding-inline-start var(--dur-med) var(--ease-soft);
+}
+
+.listItem:hover {
+  padding-inline-start: var(--space-3);
+}
+
+.listIcon {
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--copper-500);
+  opacity: 0.85;
+  transition: transform var(--dur-med) var(--ease-soft);
+}
+
+.listItem:hover .listIcon {
+  transform: scale(1.08);
+}
+
+.listName {
+  font-size: 1.35rem;
+  font-weight: 460;
+}
+
+.listDescription {
+  margin-top: var(--space-2);
+  color: var(--text-on-light-muted);
+  font-size: var(--fs-small);
+  max-width: 34rem;
+}
+
+.listPrice {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 56rem) {
+  .featured {
+    grid-template-columns: 16rem 1fr;
+    padding: var(--space-9);
+  }
+
+  .listItem {
+    grid-template-columns: 4rem 1fr auto;
+  }
+}

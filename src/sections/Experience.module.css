@@ -1,0 +1,122 @@
+.title {
+  margin-top: var(--space-4);
+  font-size: var(--fs-h1);
+  font-weight: 380;
+  max-width: 24ch;
+}
+
+.collage {
+  margin-top: var(--space-9);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 15rem;
+  gap: var(--space-4);
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  isolation: isolate;
+  transition: transform var(--dur-slow) var(--ease-editorial);
+}
+
+.panel:hover {
+  transform: scale(1.015);
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transition: transform var(--dur-slow) var(--ease-editorial);
+}
+
+.panel:hover::before {
+  transform: scale(1.06);
+}
+
+.morning::before {
+  background: radial-gradient(120% 100% at 30% 0%, #6b4a2c 0%, #2c2013 55%, #1b1510 100%);
+}
+
+.work::before {
+  background: radial-gradient(120% 100% at 70% 100%, #4a3a28 0%, #241c15 60%, #14100c 100%);
+}
+
+.conversation::before {
+  background: radial-gradient(120% 100% at 20% 100%, #7a4a24 0%, #2c1c10 55%, #14100c 100%);
+}
+
+.evening::before {
+  background: radial-gradient(120% 100% at 80% 0%, #3a1f10 0%, #170f09 60%, #0b0806 100%);
+}
+
+.panel:nth-child(1) {
+  grid-column: span 12;
+  grid-row: span 1;
+}
+
+.panel:nth-child(2) {
+  grid-column: span 12;
+  grid-row: span 1;
+}
+
+.panel:nth-child(3) {
+  grid-column: span 12;
+  grid-row: span 1;
+}
+
+.panel:nth-child(4) {
+  grid-column: span 12;
+  grid-row: span 1;
+}
+
+.panelIndex {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-6);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: rgba(243, 234, 217, 0.5);
+}
+
+.panelTitle {
+  font-size: var(--fs-h3);
+  font-weight: 460;
+  color: var(--cream-200);
+}
+
+.panelCaption {
+  margin-top: var(--space-2);
+  color: var(--text-on-dark-muted);
+  max-width: 26ch;
+}
+
+@media (min-width: 56rem) {
+  .panel:nth-child(1) {
+    grid-column: span 7;
+    grid-row: span 2;
+  }
+
+  .panel:nth-child(2) {
+    grid-column: span 5;
+    grid-row: span 1;
+  }
+
+  .panel:nth-child(3) {
+    grid-column: span 5;
+    grid-row: span 1;
+  }
+
+  .panel:nth-child(4) {
+    grid-column: span 7;
+    grid-row: span 1;
+  }
+}

@@ -1,0 +1,64 @@
+.primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 1rem 1.75rem;
+  border-radius: 999px;
+  background: var(--cream-200);
+  color: var(--espresso-950);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background var(--dur-fast) var(--ease-soft),
+    transform var(--dur-fast) var(--ease-soft),
+    box-shadow var(--dur-fast) var(--ease-soft);
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.primary:hover {
+  background: var(--caramel-400);
+  box-shadow: var(--shadow-soft);
+}
+
+.primary .icon {
+  transition: transform var(--dur-fast) var(--ease-soft);
+}
+
+.primary:hover .icon {
+  transform: translateX(3px);
+}
+
+.ghost {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-block: 0.4rem;
+  color: currentColor;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ghost::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: opacity var(--dur-fast) var(--ease-soft);
+}
+
+.ghost:hover::after {
+  opacity: 0.9;
+}

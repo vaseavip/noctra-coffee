@@ -1,0 +1,48 @@
+.footer {
+  background: var(--ink);
+  color: var(--text-on-dark-muted);
+  border-top: 1px solid var(--line-on-dark);
+  padding-block: var(--space-7);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.95;
+  font-family: var(--font-display);
+  color: var(--text-on-dark);
+}
+
+.brand span:first-child {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.brandSub {
+  font-family: var(--font-body);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.38em;
+  color: var(--accent);
+  margin-top: 0.3rem;
+}
+
+.meta {
+  font-size: var(--fs-small);
+  max-width: 28rem;
+}
+
+.top {
+  font-size: var(--fs-small);
+  text-decoration: none;
+  color: var(--text-on-dark);
+  white-space: nowrap;
+}
