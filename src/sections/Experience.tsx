@@ -18,9 +18,17 @@ export function Experience() {
             <Reveal
               as="article"
               key={moment.title}
-              className={`${styles.panel} ${styles[moment.tone]}`}
+              className={styles.panel}
               delay={0.08 * index}
             >
+              <img
+                src={moment.image}
+                alt={moment.imageAlt}
+                loading="lazy"
+                decoding="async"
+                className={`photo ${styles.panelImage}`}
+              />
+              <div className={styles.panelScrim} aria-hidden="true" />
               <div className="grain" aria-hidden="true" />
               <span className={styles.panelIndex} aria-hidden="true">
                 {moment.index}

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Cta } from "../components/Cta";
-import { Hero3D } from "../components/vessel/Hero3D";
+import { Hero3D } from "../components/beans/Hero3D";
 import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
 import styles from "./Hero.module.css";
 
@@ -12,7 +12,7 @@ export function Hero() {
       <div className={styles.glow} aria-hidden="true" />
       <div className="grain" aria-hidden="true" />
 
-      <div className={styles.vesselLayer} aria-hidden="true">
+      <div className={styles.beansLayer} aria-hidden="true">
         <Hero3D />
       </div>
 

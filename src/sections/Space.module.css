@@ -43,10 +43,32 @@
   font-weight: 600;
 }
 
-.mapWrap {
+.mediaWrap {
+  position: relative;
   max-width: 26rem;
   margin-inline: auto;
   width: 100%;
+}
+
+.photoFrame {
+  overflow: hidden;
+  border-radius: 1rem;
+  aspect-ratio: 4 / 5;
+  box-shadow: var(--shadow-soft);
+}
+
+.mapBadge {
+  position: absolute;
+  right: -1.25rem;
+  bottom: -1.25rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--surface-light-alt);
+  border: 1px solid var(--line-on-light-strong);
+  box-shadow: var(--shadow-strong);
+  padding: 0.85rem;
 }
 
 @media (min-width: 56rem) {

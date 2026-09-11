@@ -1,14 +1,14 @@
 import { lazy, Suspense, useState } from "react";
 import { usePrefersReducedMotion } from "../../hooks/usePrefersReducedMotion";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
-import { VesselFallback } from "./VesselFallback";
-import styles from "./Vessel.module.css";
+import { BeansFallback } from "./BeansFallback";
+import styles from "./Beans.module.css";
 
-// three.js + @react-three/fiber + drei are a heavy payload — split them into
-// their own chunk so the rest of the site never waits on it, and users who
-// get the static poster (reduced motion / no WebGL) never fetch it at all.
-const VesselScene = lazy(() =>
-  import("./VesselScene").then((mod) => ({ default: mod.VesselScene })),
+// three.js + @react-three/fiber are a heavy payload — split them into their
+// own chunk so the rest of the site never waits on it, and users who get the
+// static poster (reduced motion / no WebGL) never fetch it at all.
+const BeansScene = lazy(() =>
+  import("./BeansScene").then((mod) => ({ default: mod.BeansScene })),
 );
 
 function supportsWebGL(): boolean {
@@ -34,13 +34,15 @@ export function Hero3D() {
   return (
     <div className={styles.stage}>
       {useStaticPoster ? (
-        <VesselFallback />
+        <BeansFallback />
       ) : (
-        <Suspense fallback={<VesselFallback />}>
-          <VesselScene
-            segments={isCompact ? 36 : 72}
+        <Suspense fallback={<BeansFallback />}>
+          <BeansScene
+            count={isCompact ? 9 : 17}
             interactive={!isCoarsePointer}
             dpr={isCompact ? [1, 1] : [1, 1.6]}
+            spreadX={isCompact ? 0.75 : 2.2}
+            spreadZ={isCompact ? 0.5 : 0.9}
           />
         </Suspense>
       )}

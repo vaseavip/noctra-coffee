@@ -1,5 +1,6 @@
 import { Reveal } from "../components/Reveal";
 import { StylizedMap } from "../components/StylizedMap";
+import spaceImage from "../assets/photos/space-interior.webp";
 import styles from "./Space.module.css";
 
 export function Space() {
@@ -34,8 +35,19 @@ export function Space() {
           </dl>
         </Reveal>
 
-        <Reveal delay={0.15} className={styles.mapWrap}>
-          <StylizedMap />
+        <Reveal delay={0.15} className={styles.mediaWrap}>
+          <div className={styles.photoFrame}>
+            <img
+              src={spaceImage}
+              alt="Concrete and dark wood interior of the NOCTRA space, lit by a single warm ceiling light"
+              loading="lazy"
+              decoding="async"
+              className="photo"
+            />
+          </div>
+          <div className={styles.mapBadge}>
+            <StylizedMap />
+          </div>
         </Reveal>
       </div>
     </section>

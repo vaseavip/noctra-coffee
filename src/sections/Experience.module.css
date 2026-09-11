@@ -29,32 +29,22 @@
   transform: scale(1.015);
 }
 
-.panel::before {
-  content: "";
+.panelImage {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
   transition: transform var(--dur-slow) var(--ease-editorial);
 }
 
-.panel:hover::before {
+.panel:hover .panelImage {
   transform: scale(1.06);
 }
 
-.morning::before {
-  background: radial-gradient(120% 100% at 30% 0%, #6b4a2c 0%, #2c2013 55%, #1b1510 100%);
-}
-
-.work::before {
-  background: radial-gradient(120% 100% at 70% 100%, #4a3a28 0%, #241c15 60%, #14100c 100%);
-}
-
-.conversation::before {
-  background: radial-gradient(120% 100% at 20% 100%, #7a4a24 0%, #2c1c10 55%, #14100c 100%);
-}
-
-.evening::before {
-  background: radial-gradient(120% 100% at 80% 0%, #3a1f10 0%, #170f09 60%, #0b0806 100%);
+.panelScrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(11, 8, 6, 0.88) 0%, rgba(11, 8, 6, 0.15) 55%, rgba(11, 8, 6, 0.35) 100%);
 }
 
 .panel:nth-child(1) {

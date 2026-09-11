@@ -154,6 +154,19 @@ h4 {
   color: var(--text-on-light);
 }
 
+/*
+  Shared color grade for every real photograph in the site. The source photos
+  come from different photographers/shoots — this keeps them reading as one
+  consistent, warm, slightly deepened palette instead of a mismatched set.
+*/
+.photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.08) contrast(1.05) brightness(0.97) sepia(0.08);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

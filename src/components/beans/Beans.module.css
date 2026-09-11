@@ -15,9 +15,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: drop-shadow(0 2rem 3rem rgba(15, 12, 9, 0.5));
+  filter: drop-shadow(0 1.5rem 2.5rem rgba(15, 12, 9, 0.45));
 }
 
 .fallback svg {
-  max-width: 22rem;
+  max-width: 28rem;
 }
