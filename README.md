@@ -75,6 +75,14 @@ Every photograph on the site is a real, unaltered (aside from a shared color gra
 | Signature coffee | Velvet Latte | Nathan Dumlao |
 | Signature coffee | Noctra Cold Brew | Nathan Dumlao |
 | Signature coffee | Ember Mocha | Giancarlo Duarte |
+| Signature coffee | Velvet Cortado | pariwat pannium |
+| Signature coffee | Black Honey Flat White | Luke Porter |
+| Signature coffee | Noctra Affogato | kimia kazemi |
+| Signature coffee | Smoked Caramel Latte | Jeanie de Klerk |
+| Signature coffee | Dark Chocolate Tart | Nasia M. |
+| Signature coffee | Espresso Tiramisu | Vlad Krytikov |
+| Signature coffee | Burnt Basque Cheesecake | kimia kazemi |
+| Signature coffee | Cinnamon Brioche | Anhelina Vasylyk |
 | The experience | Late mornings | Aimee Giles |
 | The experience | Quiet work | Inka Kapturewska |
 | The experience | Conversations | Florian Siedl |

@@ -2,6 +2,14 @@ import featuredImage from "../assets/photos/menu-midnight-espresso.webp";
 import latteImage from "../assets/photos/menu-velvet-latte.webp";
 import coldBrewImage from "../assets/photos/menu-cold-brew.webp";
 import mochaImage from "../assets/photos/menu-ember-mocha.webp";
+import cortadoImage from "../assets/photos/menu-velvet-cortado.webp";
+import flatWhiteImage from "../assets/photos/menu-black-honey-flat-white.webp";
+import affogatoImage from "../assets/photos/menu-noctra-affogato.webp";
+import smokedCaramelImage from "../assets/photos/menu-smoked-caramel-latte.webp";
+import chocolateTartImage from "../assets/photos/menu-dark-chocolate-tart.webp";
+import tiramisuImage from "../assets/photos/menu-espresso-tiramisu.webp";
+import cheesecakeImage from "../assets/photos/menu-burnt-basque-cheesecake.webp";
+import briocheImage from "../assets/photos/menu-cinnamon-brioche.webp";
 
 export type MenuItem = {
   name: string;
@@ -43,5 +51,66 @@ export const secondaryItems: MenuItem[] = [
     price: "€5.60",
     image: mochaImage,
     imageAlt: "A dark mocha coffee with a thin layer of foam, dripping down a white cup",
+  },
+  {
+    name: "Velvet Cortado",
+    description:
+      "Espresso balanced with silky steamed milk, served short and rich with a lingering caramel finish.",
+    price: "€4.20",
+    image: cortadoImage,
+    imageAlt: "A small glass of layered espresso and milk, resting on a dark wooden table",
+  },
+  {
+    name: "Black Honey Flat White",
+    description:
+      "Double espresso folded into velvety milk, with subtle notes of honey and toasted almond.",
+    price: "€4.90",
+    image: flatWhiteImage,
+    imageAlt: "A white cup of coffee with rosetta latte art, on a wooden board",
+  },
+  {
+    name: "Noctra Affogato",
+    description: "A scoop of artisan vanilla gelato drowned in a hot shot of Midnight Espresso.",
+    price: "€5.80",
+    image: affogatoImage,
+    imageAlt: "Top view of vanilla gelato with hot espresso poured over it in a glass",
+  },
+  {
+    name: "Smoked Caramel Latte",
+    description:
+      "Espresso and steamed milk finished with smoked caramel and a delicate touch of sea salt.",
+    price: "€5.40",
+    image: smokedCaramelImage,
+    imageAlt: "A glass mug of latte with heart-shaped latte art, on a black saucer",
+  },
+  {
+    name: "Dark Chocolate Tart",
+    description:
+      "Silky dark chocolate ganache in a crisp cocoa pastry shell, finished with a touch of sea salt.",
+    price: "€6.20",
+    image: chocolateTartImage,
+    imageAlt: "A glossy dark chocolate tart on a dark slate surface with dried flowers",
+  },
+  {
+    name: "Espresso Tiramisu",
+    description: "Classic mascarpone layered with espresso-soaked ladyfingers and dark cocoa.",
+    price: "€6.50",
+    image: tiramisuImage,
+    imageAlt: "Top view of a tiramisu slice dusted with cocoa powder, on a grey plate",
+  },
+  {
+    name: "Burnt Basque Cheesecake",
+    description:
+      "A deeply caramelized Basque cheesecake with a creamy center and subtle vanilla finish.",
+    price: "€6.80",
+    image: cheesecakeImage,
+    imageAlt: "A slice of burnt Basque cheesecake with a caramelized top and creamy center",
+  },
+  {
+    name: "Cinnamon Brioche",
+    description: "Warm caramelized brioche with cinnamon, brown sugar and a light vanilla glaze.",
+    price: "€5.90",
+    image: briocheImage,
+    imageAlt: "Top view of a spiral cinnamon brioche pastry on parchment paper",
   },
 ];
