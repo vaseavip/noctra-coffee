@@ -12,19 +12,18 @@ NOCTRA is designed as an editorial, atmosphere-first site rather than a template
 
 **Type** — [Fraunces](https://fonts.google.com/specimen/Fraunces) (warm, editorial serif) for display headings against [Manrope](https://fonts.google.com/specimen/Manrope) (clean geometric sans) for body copy.
 
-**3D element** — a small field of procedurally-generated coffee beans (Three.js / React Three Fiber), each an individually seeded, noise-roughened geometry with the characteristic center crease — no two identical. They drift down slowly with a gentle sway and a very slow tumble, with a heavily damped, clamped reaction to the cursor so nothing accelerates near the viewport edges.
+**Hero** — a looping cinematic video (cappuccino, dark studio lighting) as the full-bleed background, framed so the cup sits right and the headline sits left over a soft gradient scrim. A very subtle (≤8px), heavily damped cursor parallax sits on top of the video's own motion; both the parallax and playback stop under `prefers-reduced-motion`, leaving a still frame.
 
 ## Technology
 
 - **React 19 + TypeScript + Vite**
 - **CSS Modules** with a hand-written design-token system (no CSS framework) — colors, type scale, spacing, and motion easing all live in [`src/styles/tokens.css`](src/styles/tokens.css)
 - **Framer Motion** for scroll reveals, the mobile menu transition, and the magnetic CTA hover
-- **Three.js / @react-three/fiber** for the hero's coffee-bean field, lazy-loaded on its own chunk so the rest of the site never waits on it
 
 ## Features
 
-- Fully custom, non-templated section compositions (hero, editorial philosophy spread, featured-product menu, asymmetric photo collage, a real interior photo with a stylized location badge, typographic hours, closing CTA)
-- A field of ~9–17 procedurally generated coffee beans in the hero, each individually seeded so no two are identical, falling slowly with a clamped, damped reaction to the cursor — with a static SVG fallback for `prefers-reduced-motion`, missing WebGL support, or small/touch viewports
+- Fully custom, non-templated section compositions (video hero, editorial philosophy spread, featured-product menu, asymmetric photo collage, a real interior photo with a stylized location badge, typographic hours, closing CTA)
+- Full-bleed looping video hero with a responsive gradient scrim (re-framed for portrait phones/tablets so the cup never covers the headline) and a subtle cursor parallax that's disabled under `prefers-reduced-motion`
 - Real photography throughout the menu and experience sections (sourced from Unsplash, see "Imagery" below), color-graded to one consistent warm palette, lazy-loaded and sized to avoid layout shift
 - Scroll-triggered reveals and a magnetic CTA hover, both disabled under `prefers-reduced-motion`
 - Fully responsive layout re-composed (not just shrunk) for mobile, including a full-screen mobile navigation panel
@@ -56,14 +55,15 @@ npm run preview
 
 ```
 src/
-  components/     Shared UI: navbar, footer, buttons, scroll-reveal wrapper, the 3D bean field
-    beans/        The R3F scene, procedural bean geometry, and the static fallback poster
+  components/     Shared UI: navbar, footer, buttons, scroll-reveal wrapper
   sections/       One file + one CSS module per page section
   data/           Menu, hours, and "experience" content as plain data (incl. image imports)
   hooks/          prefers-reduced-motion, media query, and scroll-position hooks
   styles/         Design tokens and global/reset styles
   assets/photos/  Optimized WebP photography (see "Imagery" below)
 ```
+
+The hero's background video lives in `public/` (served as a static asset, not bundled) and is referenced directly by `src/sections/Hero.tsx`.
 
 ## Imagery
 
